@@ -6,7 +6,7 @@ def matrix_dot_vector(a: list[list[int|float]], b: list[int|float]) -> list[int|
     # b_col = len(b[0])
     b_row = len(b)
     mul=0
-    l=[]
+    res=[]
 
     if a_col != b_row:
         return -1
@@ -14,9 +14,9 @@ def matrix_dot_vector(a: list[list[int|float]], b: list[int|float]) -> list[int|
         for i in range(a_col):
             for j in range(b_row):
               mul+=a[i][j] * b[j]
-            l.append(mul)
+            res.append(mul)
             mul=0
-        return l
+        return res
 
 
     pass
